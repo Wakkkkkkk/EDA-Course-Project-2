@@ -1,18 +1,8 @@
 #source the common program so the data can be accessed
 source('~/RStudio/EDA-Course-Project-2/Common.R')
 
-#selects the baltimore data from the dataset
-if(!exists("baltimore"))
-    NEI[NEI$fips==24510,1:6]->baltimore
-
 if(!exists("byrdat"))
     split(baltimore, baltimore$year)->byrdat
-
-#creates a function which extracts the sum of emissions for each year
-pmsum <- function(frame){
-    #create a function which prints out the 
-    sum(frame$Emissions)
-}
 
 #apply the function over the split-year data to find the total emissions by year
 lapply(byrdat, pmsum) -> sums

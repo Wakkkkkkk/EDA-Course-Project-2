@@ -5,12 +5,6 @@ source('~/RStudio/EDA-Course-Project-2/Common.R')
 if(!exists("yrdat"))
     split(NEI, NEI$year)->yrdat
 
-#creates a function which extracts the sum of emissions for each year
-pmsum <- function(frame){
-    #create a function which prints out the 
-    sum(frame$Emissions)
-}
-
 #apply the function over the split-year data to find the total emissions by year
 lapply(yrdat, pmsum) -> sums
 unlist(sums) ->vectform
