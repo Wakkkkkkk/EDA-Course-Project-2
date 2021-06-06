@@ -1,4 +1,5 @@
 source('~/RStudio/EDA-Course-Project-2/Common.R')
+library(dplyr)
 
 if(!exists("motor")){
     #Search for all the SCC codes corresponding to vehicles
