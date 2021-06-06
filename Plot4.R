@@ -13,7 +13,7 @@ coal %>%
     group_by(year) %>% #Groups the data so it can be processed by summarise
     summarise(Emissions=sum(Emissions))->coalsum #finds the sum of emissions by year
 
-png(file="plot1.png")
+png(file="plot4.png")
 #create the graph, with appropriate labels and axes
 plot(coalsum$year,coalsum$Emissions, type="l", ylim = c(0,700000), ylab = "PM2.5 Emissions (tons)", xlab = "Year", main = "PM2.5 Emissions by Coal-Related Sources in the US by Year")
 dev.off()

@@ -11,5 +11,5 @@ unlist(sums) ->vectform
 
 png(file="plot1.png")
 #create the graph, with appropriate labels and axes
-plot(names(vectform),vectform, type="l", ylim = c(0,8000000), ylab = "PM2.5 Emissions (tons)", xlab = "Year", main = "PM2.5 Emissions by Year")
+plot(names(vectform),vectform, type="l", ylim = c(0,8000000), ylab = "PM2.5 Emissions (tons)", xlab = "Year", main = "PM2.5 Emissions in the US by Year")
 dev.off()
