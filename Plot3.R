@@ -1,6 +1,7 @@
 #source the common program so the data can be accessed
 source('~/RStudio/EDA-Course-Project-2/Common.R')
 library(ggplot2)
+library(dplyr)
 
 baltimore %>%
     group_by(type,year) %>% #Groups the data so it can be processed by summarise
