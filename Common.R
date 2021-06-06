@@ -5,7 +5,7 @@ if(!exists("NEI"))
 
 #selects the baltimore data from the dataset
 if(!exists("baltimore"))
-    NEI[NEI$fips==24510,1:6]->baltimore
+    NEI[NEI$fips=="24510",1:6]->baltimore
 
 #creates a function which extracts the sum of emissions for each year
 pmsum <- function(frame){
